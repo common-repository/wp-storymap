@@ -1,0 +1,165 @@
+#map-pro {
+    position: relative;
+    left: 0;
+    width: 70vw;
+    height: 85vh;
+    z-index: 99 !important;
+}
+
+.pannel{
+  background-color: rgba(255, 255, 255, .75) ;
+  margin-top:0px !important;
+  margin-right: 0px !important;
+  padding-left:20px;
+  padding-right:20px;
+  overflow:auto !important;
+
+}
+
+.leaflet-control-minimap{
+  border: 0px solid !important;
+}
+
+
+.point_title{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: 'PT Sans Narrow',sans-serif !important;
+  font-size:25px;
+  font-weight: 650;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+
+.description{
+  padding-top: 40px;
+  text-align: justify;
+  font-family: 'PT Serif',serif;
+  font-size: 16px;
+  line-height: 1.3em;
+  color: #4f4c4a;
+  height:100%;
+}
+
+.img-holder{
+  /*width:30vw;*/
+  text-align: center;
+  box-shadow: 7px 7px 3px grey;
+}
+/* CONTROL VERTICAL CENTER POSITION */
+.leaflet-verticalcenter {
+    position: absolute;
+    z-index: 1000;
+    pointer-events: none;
+    top: 50%; /* possible because the placeholder's parent is the map */
+    transform: translateY(-50%); /* using the CSS3 Transform technique */
+    padding-top: 10px;
+}
+
+.leaflet-verticalcenter .leaflet-control {
+    margin-bottom: 10px;
+}
+
+.leftArrow,
+.rightArrow{
+  cursor: pointer;
+  text-align: center;
+  margin-top:5px;
+  font-size:20px !important;
+  border: 0px solid !important;
+}
+
+.rightArrow{
+  /*margin-right: 35vw !important;*/
+}
+
+.extra-marker i {
+  margin-top: 7px !important;
+}
+
+.icon-marker{
+  display: inline-block;
+  font-size: 0.8em;
+  margin-top: -5px;
+}
+
+
+.point_title,
+.img-holder,
+.description{
+  animation: animateElement linear 0.4s;
+  animation-iteration-count: 1;
+}
+
+@keyframes animateElement{
+  0% {
+    opacity:0;
+    transform:  translate(-500px,0px);
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px);
+  }
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  ::-webkit-scrollbar {
+      display: yes;
+  }
+  #map-pro {
+    width: 100vw;
+    height: 91vh;
+    /*width: 100vw;*/
+  }
+
+  .pannel{
+	width:100vw !important;
+	height:40vh !important;
+	/*position:relative !important;
+	margin-top:50vh !important;*/
+
+  }
+  #title {
+    width: 80%;
+    left: 10%;
+    min-width: 0;
+  }
+  #narration {
+    width: 80%;
+    min-width: 0;
+    left: 10%;
+    background: none;
+    opacity: 0.8;
+  }
+  .img-holder{
+  	/*width:80vw !important;*/
+  	text-align: center;
+  	box-shadow: 7px 7px 3px grey;
+  }
+
+  .img-holder > img{
+		/*width:80vw !important;*/
+	}
+  .description {
+      padding: 0;
+      padding-bottom: 10px;
+  }
+  .leaflet-control-container {
+      display: yes;
+  }
+  .leaflet-control-zoom,
+  .leaflet-control-minimap{
+	display:none;
+   }
+
+  .rightArrow{
+    margin-right: 2vw !important;
+   }
+
+  .leftArrow,
+  .rightArrow{
+  	margin-top:100px;
+   }
+}

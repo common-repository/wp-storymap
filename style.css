@@ -1,0 +1,8 @@
+/*#mapid { height: 180px; }*/
+#mapid {
+  background-color:red;
+}
+
+.entry .entry-content a {
+  text-decoration: none !important;
+}
